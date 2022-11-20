@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html lang="ja">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% block content %}
+<h1>SignUp</h1>
 
-<body>
-    <h1>SignUp</h1>
+<div class="container">
     <form action="/signup" method="post">
-        ユーザー名: <input type="text" name="userName">
-        <br>
-        パスワード: <input type="password" name="password">
-        <br><br>
-        <input type="submit" value="singup">
+        <div class="row">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="userName" placeholder="userName">
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" name="password" placeholder="password">
+            </div>
+            <div class="col-4 offset-4">
+                <input class="btn btn-primary" type="submit" value="singup">
+            </div>
+        </div>
     </form>
-</body>
-
-</html>
+</div>
+{% endblock %}
